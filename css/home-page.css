@@ -1,0 +1,1050 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/************************Styling for NAVIGATION BAR**************************/
+header .navbar{
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: small;
+}
+.navbar{
+    width: auto;
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
+/*Search Bar*/
+.search{
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 500px;
+    margin-left: 20px;
+}
+.search img{
+    height: 15px;
+    width: 15px;
+}
+/*Links to pages for the Nav-bar*/
+a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2px;
+}
+a:hover{
+    text-decoration: underline;
+}
+.links{
+    flex: 1;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 20px;
+}
+.links nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.links .img-links img{
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: -7px;
+}
+.links ul{
+    display: inline-block;
+    list-style-type: none;
+}
+.links .page-links ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.links img{
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+.img-links .home-icon{
+    width: 15px;
+    transform: translate(-12px);
+}
+.img-links .account-icon{
+    width: 15px;
+    transform: translate(-11px);
+}
+.img-links .basket-icon{
+    width: 15px;
+    transform: translate(-10px);
+}
+
+/*Resizing for half-screen */
+@media screen and (max-width:1100px){
+    /*Navigation Bar*/
+    .search input{
+        max-width: 200px;
+    }
+    .links{
+        text-align: center;
+        flex: auto;
+    }
+}
+
+/************************Styling for Login Banner**************************/
+/*5 Categories for Menu*/
+.menu{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 5px;
+    display: flex;
+    font-size: small;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+/*Log-in Banner*/
+.banner-log{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+.log-in{
+    width: 100%;
+    width: max-width;
+    height: 500px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+}
+.button:hover{
+    text-decoration: underline;
+}
+.heading{
+    width: 80%;
+    max-width: 750px;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.heading:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+.heading h1{
+    font-size: 3rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px 0;
+    padding-top: 50px;
+}
+.heading-links{
+    padding-top: 30px;
+}
+.log-in p{
+    text-align: center;
+    padding: 20px;
+}
+.button#login-btn{
+    background-color: white;
+    color: black;
+    margin-left: 40px;
+}
+
+@media screen and (max-width:700px){
+    /*Banner*/
+    .heading{
+        width: 80%;
+    }
+
+    .heading h1, p{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/************************PRODUCT SHOWCASE**************************/
+.featured-products{
+    margin-bottom: 20px;
+}
+.featured-products h2{
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+    line-height: 40px;
+}
+.featured-products p{
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.product-row{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-flow: row;
+    position: relative;
+    width: auto;
+    gap: 0.5%;
+}
+.product-card{
+    background-color: #f3f3f3;
+    align-items: center;
+    padding: 3px;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 10px;
+    height: 400px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.product-card img{
+    height:200px;
+}
+.product-card h4, .product-card p{
+    text-align: center;
+    padding-top: 4px;
+    margin-bottom: 5px;
+}
+.product-card .button{
+    margin-top: 20px;
+    border-radius: 10px;   
+    align-items: bottom;
+    position: absolute;
+    transform: translateX(30%);
+    color: white;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+}
+.product-card .button:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.product-card:hover{
+    transform: scale(1.1);
+}
+.stock-indicator .in-stock{
+    margin: 2px;
+    margin-right: 70%; 
+    background-color: rgb(188, 220, 188);
+    color: rgb(9, 120, 9);
+    font-size: small;
+    border-radius: 10px;
+    padding: 1px;
+}
+.stock-indicator .low-stock{
+    margin: 2px;
+    margin-right: 50%; 
+    background-color: rgb(228, 230, 176);
+    color: rgb(112, 128, 14);
+    font-size: small;
+    border-radius: 10px;
+    padding: 1px;
+}
+.stock-indicator .out-stock{
+    margin: 2px;
+    margin-right: 50%; 
+    background-color: rgb(255, 211, 211);
+    color: rgb(193, 0, 0);
+    font-size: small;
+    border-radius: 10px;
+    padding: 1px;
+}
+
+/*Products displayed in rows when screen is resized*/
+@media screen and (max-width:1150px){
+    .product-row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+
+    .product-card{
+        margin: 20px;
+        padding: 10px;
+        width: calc(50%-10%);
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:900px){
+    .product-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+
+    .product-card{
+        width: 100%;
+        width: calc(75%);
+        height: 100%;
+    }
+}
+
+/**************************ABOUT US and CONTACT US**************************/
+.about{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box{
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 4px 2px 6px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.box h1{
+    margin-top: 30px;
+}
+.box h1, .box p{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.box .button{
+    margin-top: 20px;
+    transition: transform 0.5s ease;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+    border: none;
+    margin-bottom: 30px;
+}
+.box .button:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.2);
+}
+.box img{
+    max-width: 400px;
+}
+.about-p{
+    margin-top: 60px;
+    text-align: center;
+}
+
+/*********************************FOOTER*************************************/
+.footer{
+    padding-top: 30px;
+    font-size: small;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.footer-box{
+    flex: 1;
+    text-align: center;
+}
+.footer-box img{
+    width: 20px;
+}
+.footer .button{
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+    border: none;
+}
+.footer .button:hover{
+    text-decoration: underline;
+}
+.footer h3{
+    padding-bottom: 10px;
+}
+ul{
+    list-style-type: none;
+    padding: 5px 10px;
+    display: inline-block;
+}
+footer p{
+    text-align: center;
+    font-size: small;
+    margin-bottom: 5px;
+}
+.socials{
+    width: 15px;
+    margin: 10px;
+    transform: translate(140px);
+}
+.line{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 5px;
+    display: flex;
+    font-size: small;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Resizing for social media icons*/
+@media screen and (max-width:800px){
+    .socials{
+        width: 15px;
+        margin: 10px;
+        transform: translate(50px);
+    }
+}
+
+/*Product-details page styling */
+.product-detail{
+    width: 100%;
+    position: relative;
+}
+
+/*Product images*/
+.gallery{
+    margin: 30px;
+    margin-top: 10px;
+}
+#main-image{
+    width:400px;
+}
+.small-gallery{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 120px;
+    overflow-x: auto;
+}
+.product-detail .product-row{
+    margin: 20px;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 30px;
+}
+.details{
+    padding: 10px;
+    margin: 150px;
+    width: 100%;
+    margin-top: 20px;
+}
+.details h3{
+    font-size: 30px;
+}
+.details a{
+    padding: 0;
+    font-size: small;
+    color:  rgba(0, 0, 0, 0.5);
+}
+/*Add to Basket button*/
+.details .btn{
+    margin-top: 10px;
+    padding: 5px;
+    font-size: medium;
+    transition: transform 0.5s ease;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.4);
+    border: none;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    width: 100%;
+}
+.details .btn:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+}
+.details select{
+    margin-top: 10px;
+    font-size: small;
+    border-radius: 10px;
+}
+.stock-indicator2 .in-stock{
+    margin: 2px;
+    text-align: center;
+    background-color: rgb(188, 220, 188);
+    color: rgb(9, 120, 9);
+    font-size: small;
+    border-radius: 10px;
+    padding: 1px;
+}
+.stock-indicator2 .low-stock{
+    margin: 2px;
+    text-align: center;
+    background-color: rgb(228, 230, 176);
+    color: rgb(112, 128, 14);
+    font-size: small;
+    border-radius: 10px;
+    padding: 1px;
+}
+.stock-indicator2 .out-stock{
+    margin: 2px;
+    text-align: center;
+    background-color: rgb(255, 211, 211);
+    color: rgb(193, 0, 0);
+    font-size: small;
+    border-radius: 10px;
+    padding: 1px;
+}
+/*Rating products*/
+.rating-bar{
+    font-size: large;
+}
+
+.avg-rating{
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.stars{
+    display: inline-block;
+    font-size: 30px
+}
+
+.star{
+    color: gold;
+}
+.filled::before{
+    content: "\2605";
+}
+.half::before{
+    content: "\2605";
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 0.5em;
+}
+.half::after{
+    content: "\2605";
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    left: 0;
+    width: 0.5em;
+}
+/*Reviews*/
+.product-detail .reviews{
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+}
+.reviews h2{
+    text-align: center;
+}
+.review{
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.user{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.review-text{
+    margin-bottom: 10px;
+}
+.date{
+    font-size: 12px;
+    color: #666;
+}
+.no-reviews{
+    font-style: italic;
+    columns: #666;
+}
+
+/*Products page styling */
+.sorting form{
+    margin: 20px;
+    text-align: right;
+}
+.sorting form .button{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin: 0;
+    padding: 5px;
+}
+
+/*Error messages */
+.error-message {
+    background-color: red;
+    color: red;
+}
+
+/*Cart Items*/
+.cart-page{
+    margin: 80px auto;
+    padding-left:20px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color:blue;
+    background:azure;
+    font-weight: normal;
+}
+td{
+    padding:10px 5px;
+}
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color:blue;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #623bff;
+width:100%;
+max-width: 400px;
+td:last-child{
+    text-align: right;
+}
+}
+th:last-child{
+    text-align: left;
+    padding-left:20px;
+}
+
+.cart-line{
+    float:right;
+    padding-left:10px;
+    width:400px
+}
+
+/*Empty Basket Page styling*/
+.empty-basket{
+    margin-top: 20px;
+    background-color: #f3f3f3;
+}
+.empty-basket h1{
+    text-align: center;
+}
+/*Buttons for Basket page*/
+.checkout-button {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;  
+    border-style: none;
+    position: absolute;
+    color: white;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    left: 42%;
+    right: 42%;
+    margin-top: 20px;
+}
+.checkout-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+.welcome-message {
+    font-size: 6px; 
+    color: #e90606; 
+    padding: 10px;
+    margin-top: 0px; 
+    text-align: center; 
+
+}
+
+.logout-button {
+    padding: 12px 20px;
+    background-color: #c1bebe;
+    color: rgba(46, 10, 10, 0.5);
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+/*Error messages */
+.product-row .error-message {
+    background-color: rgb(247, 182, 182);
+    color: red;
+}
+
+/*Admin styling */
+/*Pin Page*/
+.admin-pin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.pin{
+    padding: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 10px;
+    padding-top: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.pin input[type="password"]{
+    display: block;
+    width: 200px;
+    margin: 15px;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border: 1px solid black;
+}
+.pin input[type="submit"]{
+    display: block;
+    width: 100px;
+    margin: 15px;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10px;
+    border-radius: 20px;  
+    border-style: none;
+    color: white;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.pin input[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+/*Index - admin*/
+.container1{
+    margin: 30px;
+}
+.admin-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container1 h3{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    flex: 1;
+    background-color: #f3f3f3;
+    align-items: center;
+    padding: 30px;
+    padding-bottom: 50px;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+.container form{
+    display: inline-block;
+}
+.container #img1{
+    margin: 40px;
+}
+.logout-form {
+    text-align: center;
+    margin-top: 20px;
+}
+.logout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;  
+    border: none;
+    border-radius: 10px;   
+    align-items: bottom;
+    color: black;
+    background-color: white;
+    border: 1px solid rgba(46, 10, 10, 0.5);
+    transition: transform 0.3s ease;
+}
+.logout-button:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    transform: scale(1.1);
+}
+.stock-form {
+    text-align: center;
+    margin-top: 20px;
+}
+.stock-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;  
+    border: none;
+    border-radius: 10px;   
+    align-items: bottom;
+    color: white;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+    transition: transform 0.3s ease; 
+}
+.stock-button:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+.changePw-form {
+    text-align: center;
+    margin-top: 20px;
+}
+.changePw-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;  
+    border: none;
+    border-radius: 10px;   
+    align-items: bottom;
+    color: white;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+    transition: transform 0.3s ease;    
+}
+.changePw-button:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+.pW-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;  
+    border: none;
+    border-radius: 10px;   
+    align-items: bottom;
+    margin-left: 30%;
+    color: white;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+    transition: transform 0.3s ease;    
+}
+.pW-button:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+.container2{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-bottom: 50px
+}
+/*Stock - dashboard*/
+.admin-menu{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 5px;
+    display: flex;
+    font-size: small;
+    justify-content: space-around;
+    align-items: center;
+}
+.admin-menu a{
+    color: white;
+}
+
+.admin h1 {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.admin p {
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom:10px;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #000000;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+td input[type="number"] {
+    width: 150px;
+    padding: 5px;
+}
+
+td button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;   
+    color: white;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+    transition: transform 0.3s ease;
+}
+
+td button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(216, 255, 216);
+    color: rgb(0, 167, 0);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+tr{
+    border-bottom: 1px solid #ccc;
+}
+/*Admin password change*/
+#admin-pw form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#admin-pw form label{
+    flex: 1;
+    text-align: right;
+}
+#admin-pw form input[type="password"]{
+    flex: 3;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#admin-pw button[type="submit"]{
+    margin-top: 20px;
+    border: none;
+    padding: 7px;
+    border-radius: 10px;   
+    color: white;
+    transition: background-colour 0.3s ease;
+    background-color: rgba(46, 10, 10, 0.5);
+    transition: transform 0.3s ease;
+    
+}
+#admin-pw button[type="submit"]:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+/*Admin log-out*/
+.logout-message {
+    text-align: center;
+}
+/*Admin change customer*/
+.container h1{
+    margin-bottom: 20px;
+}
+.container ol{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+.container li{
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.admin h2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+}
