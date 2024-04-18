@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/payments.css">
+    <link rel="shortcut icon" type="icon" href="assests/Banners/logo.png">
+    
+</head>
+<body>
+     <!--Header - brand logo and navigation bar-->
+     <header>
+        <!--LOGO-->
+        <div class="navbar">
+            <img src="../assests/Navbar/UT-new-logo.png" width="100px" alt="UNITOP logo">
+            
+            <!--NAVIGATION BAR-->
+            <div class="links">
+                <nav>
+                    <div class="img-links">
+                        <a href="../index.php"><img src="../assests/Navbar/home_4991416.png" class="home-icon"></a>
+                        <a href="../accounts.php"><img src="../assests/Navbar/avatar_9892372.png" class="account-icon"></a>
+                        <a href="../basket.php"><img src="../assests/Navbar/checkout_4765148.png" class="basket-icon"></a>
+                        <a href="../admin_pin.php"><img src="../assests/Navbar/staffpic.png" class="staff-icon"></a>
+                    </div>
+                    <div class="page-links">
+                        <ul>
+                            <li><a href="../index.php">Home</a></li>
+                            <li><a href="../accounts.php">Account</a></li>
+                            <li><a href="../basket.php">Basket</a></li>
+                            <li><a href="../admin_pin.php">Staff login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<div class="container">
+
+    <form id="payment-form" action="../store-payments.php" method="post">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Billing Address</h3>
+
+
+                <div class="inputBox">
+                    <span>Company Email:</span>
+                    <input type="email" name="email" id="email" placeholder="Email" pattern=".+@.+\.ac\.uk$" title="Email must end with .ac.uk" required> 
+                </div>
+                <div class="inputBox">
+                    <span>Company Address:</span>
+                    <input type="text" id="address" name="address" placeholder="Street etc." maxlength="100" required title="Please enter your street address (e.g., 123 Aston St)">
+                </div>
+                <div class="inputBox">
+                    <span>City:</span>
+                    <input type="text" placeholder="Birmingham" name="city" id="city" maxlength="30" required pattern="[A-Za-z ]+" title="Please enter only letters (A-Z or a-z)">
+
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Area:</span>
+                        <input type="text" placeholder="Aston" name="area" id="area" maxlength="40" pattern="[A-Za-z]*" required title="Please enter only letters (A-Z or a-z)">
+                    </div>
+                    <div class="inputBox">
+                        <span>Post Code:</span>
+                        <input type="text" placeholder="123 456" name="postcode" id="postcode" maxlength="7" required pattern="[A-Za-z0-9 ]+" title="Please enter only letters and numbers">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Payment</h3>
+
+                <div class="inputBox">
+                    <span>Cards Accepted:</span>
+                    <img src="../assests/Payments/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Name On Card:</span>
+                    <input type="text" placeholder="Mr. Steve Smith" name="fullname" id="name" maxlength="30" pattern="[A-Za-z]+(\s[A-Za-z]+)?" required title="Please enter only letters (A-Z or a-z) with an optional space between names">
+                </div>
+
+                <div class="inputBox">
+                <required>
+                    <span> Credit Card Number:</span>
+                    <input type="text" placeholder="1111 2222 3333 4444" name="num" id="num" maxlength="19" required>
+                     </required>
+                </div>
+
+
+                <div class="flex">          
+                    <div class="inputBox">
+                        <span>Exp Date:</span>
+                        <input type="text" id="expDate" name="expDate" placeholder="MM/YY" maxlength="5" pattern="(0[1-9]|1[0-2])\/\d{2}" required title="Please enter the expiration date in the format MM/YY (e.g., 12/24)">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" pattern="[0-9]{3}" required title="Please enter a 3-digit number (e.g., 123)">
+                    </div>
+                </div>
+
+
+            </div>
+    
+        </div>
+
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+    </form>
+</div>    
+
+
+<script defer src="../js/payments-form.js"></script>
+    <!--FOOTER-->
+    <footer>
+        <div class="footer">
+            <div class="footer-box">
+                <img src="../assests/Navbar/logo-no-slogan.png">
+                <h3>UNITOP</h3>
+                <p>Educate with UNITOP!</p>
+                <a href="../login.php" class="button">Log In</a>
+               
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="socials">
+                    <img src="../assests/Footer/instagram.png">
+                    <img src="../assests/Footer/facebook.png">
+                    <img src="../assests/Footer/linkedin.png">
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="../about-us.html">Who We Are</a></li>
+                    <br>
+                    <li><a href="../about-us.html">Our Mission</a></li>
+                    <br>
+                    <li><a href="../about-us.html">The Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="../index.php">Home</a></li>
+                    <br>
+                    <li><a href="../contact.php">Contact Us</a></li>
+                    <br>
+                    <li><a href="../about-us.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line">
+            <p>Terms and Conditions apply* | UNITOP Limited</p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
